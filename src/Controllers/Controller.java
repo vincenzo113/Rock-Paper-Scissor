@@ -1,3 +1,5 @@
+package Controllers;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,10 +25,12 @@ public class Controller {
     @FXML
     private Label computerScoreLabel;
 
+    //Secondary Controllers:
+    private ScoresController scoresController;
 
-    /**
-     * Initialize scores
-     */
+    public void initialize(){
+        scoresController = new ScoresController(computerScoreLabel,userScoreLabel,whoWinsGameLabel);
+    }
 
 
     /**
@@ -41,7 +45,7 @@ public class Controller {
         sb.append(calcolaMossaComputer());
         computerChoiceLabel.setText(sb.toString());
         verifyWinner("Sasso");
-        updateScores();
+        scoresController.updateScores();
 
     }
 @FXML
@@ -51,7 +55,7 @@ public class Controller {
     sb.append(calcolaMossaComputer());
     computerChoiceLabel.setText(sb.toString());
         verifyWinner("Carta");
-        updateScores();
+        scoresController.updateScores();
     }
 @FXML
     public void forbiceChoice(ActionEvent actionEvent)
@@ -61,7 +65,7 @@ public class Controller {
         sb.append(calcolaMossaComputer());
         computerChoiceLabel.setText(sb.toString());
         verifyWinner("Forbice");
-        updateScores();
+        scoresController.updateScores();
     }
 
 
@@ -105,21 +109,6 @@ public class Controller {
     private void resetAll(){
         whoWinsGameLabel.setText("");
         computerChoiceLabel.setText("Computer choice: ");
-    }
-
-    private void updateScores(){
-        if(whoWinsGameLabel.getText().startsWith("C")) {
-            int previousScore = Integer.parseInt(computerScoreLabel.getText().split("[:]")[1]);
-            computerScoreLabel.setText("");
-            computerScoreLabel.setText("Computer:"+(previousScore+1));
-        }
-        else
-        {
-            userScoreLabel.setText("");
-            int previousScore = Integer.parseInt(computerScoreLabel.getText().split("[:]")[1]);
-            userScoreLabel.setText("User:"+(previousScore+1));
-        }
-
     }
 
 
