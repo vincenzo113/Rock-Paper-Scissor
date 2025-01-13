@@ -18,11 +18,15 @@ public class Controller {
     private Label computerChoiceLabel;
     @FXML
     private Label userChoice;
+    @FXML
+    private Label userScoreLabel;
+    @FXML
+    private Label computerScoreLabel;
 
 
-    public void initialize(){
-
-    }
+    /**
+     * Initialize scores
+     */
 
 
     /**
@@ -37,6 +41,7 @@ public class Controller {
         sb.append(calcolaMossaComputer());
         computerChoiceLabel.setText(sb.toString());
         verifyWinner("Sasso");
+        updateScores();
 
     }
 @FXML
@@ -46,6 +51,7 @@ public class Controller {
     sb.append(calcolaMossaComputer());
     computerChoiceLabel.setText(sb.toString());
         verifyWinner("Carta");
+        updateScores();
     }
 @FXML
     public void forbiceChoice(ActionEvent actionEvent)
@@ -55,6 +61,7 @@ public class Controller {
         sb.append(calcolaMossaComputer());
         computerChoiceLabel.setText(sb.toString());
         verifyWinner("Forbice");
+        updateScores();
     }
 
 
@@ -100,6 +107,20 @@ public class Controller {
         computerChoiceLabel.setText("Computer choice: ");
     }
 
+    private void updateScores(){
+        if(whoWinsGameLabel.getText().startsWith("C")) {
+            int previousScore = Integer.parseInt(computerScoreLabel.getText().split("[:]")[1]);
+            computerScoreLabel.setText("");
+            computerScoreLabel.setText("Computer:"+(previousScore+1));
+        }
+        else
+        {
+            userScoreLabel.setText("");
+            int previousScore = Integer.parseInt(computerScoreLabel.getText().split("[:]")[1]);
+            userScoreLabel.setText("User:"+(previousScore+1));
+        }
+
+    }
 
 
 }

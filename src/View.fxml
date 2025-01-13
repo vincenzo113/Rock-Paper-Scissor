@@ -17,6 +17,8 @@
       <Button id="forbiceButton" fx:id="forbiceButton" layoutX="457.0" layoutY="250.0" mnemonicParsing="false" onAction="#forbiceChoice" prefHeight="84.0" prefWidth="97.0" text="Forbice" />
       <Label fx:id="whoWinsGameLabel" alignment="CENTER" layoutX="128.0" layoutY="168.0" prefHeight="21.0" prefWidth="344.0" textAlignment="JUSTIFY" />
       <Label id="computerChoiceLabel" fx:id="computerChoiceLabel" layoutX="121.0" layoutY="50.0" prefHeight="21.0" prefWidth="344.0" text="Computer Choice: " />
-      <Label id="whoWinsGameLabel" alignment="CENTER" layoutX="178.0" layoutY="121.0" prefHeight="21.0" prefWidth="202.0" />
+      <Label id="whoWinsGameLabel" alignment="CENTER" layoutX="200.0" layoutY="121.0" prefHeight="21.0" prefWidth="202.0" />
+      <Label fx:id="userScoreLabel" layoutX="53.0" layoutY="121.0" prefHeight="45.0" prefWidth="84.0" text="User:0" textFill="#5e5454" />
+      <Label fx:id="computerScoreLabel" layoutX="426.0" layoutY="121.0" prefHeight="45.0" prefWidth="135.0" text="Computer:0" />
    </children>
 </AnchorPane>
