@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -8,7 +9,10 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <Button id="sassoButton" fx:id="sassoButton" layoutX="66.0" layoutY="250.0" mnemonicParsing="false" onAction="#sassoChoice" prefHeight="84.0" prefWidth="97.0" text="Sasso" />
+      <Button id="sassoButton" fx:id="sassoButton" layoutX="66.0" layoutY="250.0" mnemonicParsing="false" onAction="#sassoChoice" prefHeight="84.0" prefWidth="97.0" text="Sasso">
+         <effect>
+            <Blend />
+         </effect></Button>
       <Button id="cartaButton" fx:id="cartaButton" layoutX="252.0" layoutY="250.0" mnemonicParsing="false" onAction="#cartaChoice" prefHeight="84.0" prefWidth="97.0" text="Carta" />
       <Button id="forbiceButton" fx:id="forbiceButton" layoutX="457.0" layoutY="250.0" mnemonicParsing="false" onAction="#forbiceChoice" prefHeight="84.0" prefWidth="97.0" text="Forbice" />
       <Label fx:id="whoWinsGameLabel" alignment="CENTER" layoutX="128.0" layoutY="168.0" prefHeight="21.0" prefWidth="344.0" textAlignment="JUSTIFY" />
