@@ -14,6 +14,5 @@
       <Label fx:id="whoWinsGameLabel" alignment="CENTER" layoutX="128.0" layoutY="168.0" prefHeight="21.0" prefWidth="344.0" textAlignment="JUSTIFY" />
       <Label id="computerChoiceLabel" fx:id="computerChoiceLabel" layoutX="121.0" layoutY="50.0" prefHeight="21.0" prefWidth="344.0" text="Computer Choice: " />
       <Label id="whoWinsGameLabel" alignment="CENTER" layoutX="178.0" layoutY="121.0" prefHeight="21.0" prefWidth="202.0" />
-      <Button fx:id="resetButton" layoutX="480.0" layoutY="35.0" mnemonicParsing="false" onAction="#resetAll" text="Reset" />
    </children>
 </AnchorPane>

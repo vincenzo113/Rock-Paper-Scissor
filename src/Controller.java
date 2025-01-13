@@ -20,6 +20,11 @@ public class Controller {
     private Label userChoice;
 
 
+    public void initialize(){
+
+    }
+
+
     /**
      * Sceglie come mossa Sasso e calcola la mossa del computer,dopo verifica chi ha vinto
      * @param actionEvent
@@ -27,6 +32,7 @@ public class Controller {
      */
     @FXML
     public void sassoChoice(ActionEvent actionEvent) {
+        resetAll();
         StringBuffer sb = new StringBuffer(computerChoiceLabel.getText());
         sb.append(calcolaMossaComputer());
         computerChoiceLabel.setText(sb.toString());
@@ -35,6 +41,7 @@ public class Controller {
     }
 @FXML
     public void cartaChoice(ActionEvent actionEvent) {
+    resetAll();
     StringBuffer sb = new StringBuffer(computerChoiceLabel.getText());
     sb.append(calcolaMossaComputer());
     computerChoiceLabel.setText(sb.toString());
@@ -43,6 +50,7 @@ public class Controller {
 @FXML
     public void forbiceChoice(ActionEvent actionEvent)
     {
+        resetAll();
         StringBuffer sb = new StringBuffer(computerChoiceLabel.getText());
         sb.append(calcolaMossaComputer());
         computerChoiceLabel.setText(sb.toString());
@@ -87,10 +95,11 @@ public class Controller {
 
     }
 
-
-    public void resetAll(ActionEvent actionEvent) {
+    private void resetAll(){
         whoWinsGameLabel.setText("");
         computerChoiceLabel.setText("Computer choice: ");
-
     }
+
+
+
 }
