@@ -1,0 +1,38 @@
+/* Stile per il root pane */
+.root {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 20px;
+    -fx-font-family: "Arial";
+}
+
+/* Stile per l'etichetta */
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}
+
+/* Stile per i pulsanti */
+.button {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-border-insets: 0px;
+    -fx-border-style: solid;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #d6d6d6;
+}
+
+.button:pressed {
+    -fx-background-color: #bfbfbf;
+}

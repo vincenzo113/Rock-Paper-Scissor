@@ -7,13 +7,11 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Codice eseguito all'inizio dell'applicazione
-        System.out.println("Applicazione avviata - codice iniziale eseguito!");
-
-        // Carica il file FXML
         Parent root = FXMLLoader.load(getClass().getResource("/View.fxml"));
+        Scene scene = new Scene(root, 500, 300);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         primaryStage.setTitle("");
-        primaryStage.setScene(new Scene(root, 500, 300));
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
