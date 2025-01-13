@@ -30,6 +30,7 @@ public class Controller {
 
     public void initialize(){
         scoresController = new ScoresController(computerScoreLabel,userScoreLabel,whoWinsGameLabel);
+
     }
 
 
